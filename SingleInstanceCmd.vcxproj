@@ -87,6 +87,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="example.bat" />
+    <None Include="LICENSE" />
     <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
