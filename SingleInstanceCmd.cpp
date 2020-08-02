@@ -72,8 +72,8 @@ int _tmain(int argc, const _TCHAR* argv[])
 	{
 		//assign a job object so that child processes will be killed when parent (SingleInstanceCmd.exe) is killed
 
-		JOBOBJECT_EXTENDED_LIMIT_INFORMATION job_info;
-		DWORD out_size;
+		JOBOBJECT_EXTENDED_LIMIT_INFORMATION jobInfo;
+		DWORD outSize;
 		BOOL success;
 
 
@@ -84,21 +84,21 @@ int _tmain(int argc, const _TCHAR* argv[])
 		success = QueryInformationJobObject(
 			job,
 			JobObjectExtendedLimitInformation,
-			&job_info,
+			&jobInfo,
 			sizeof(JOBOBJECT_EXTENDED_LIMIT_INFORMATION),
-			&out_size
+			&outSize
 		);
 
 
-		job_info.BasicLimitInformation.LimitFlags |= JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE;
+		jobInfo.BasicLimitInformation.LimitFlags |= JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE;
 
-		// job_info.MaximumWorkingSetSize = size
+		// jobInfo.MaximumWorkingSetSize = size
 
 
 		success = SetInformationJobObject(
 			job,
 			JobObjectExtendedLimitInformation,
-			&job_info,
+			&jobInfo,
 			sizeof(JOBOBJECT_EXTENDED_LIMIT_INFORMATION)
 		);
 
