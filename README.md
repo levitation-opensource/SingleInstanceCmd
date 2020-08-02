@@ -1,7 +1,7 @@
 ## SingleInstanceCmd
 Tool for ensuring that a process specified in the arguments is launched only one at a time. Similar to the flock tool in Linux.
 
-By default, the SingleInstanceCmd.exe tool creates also a job object, which ensures that when SingleInstanceCmd.exe tool is killed then the child process and all of its grandchildren descending from it are also killed.
+By default, the SingleInstanceCmd.exe tool creates also a job object, which ensures that when the SingleInstanceCmd.exe tool is killed then the child process and all of its grandchildren descending from it are also killed.
 
 The main use case for this has been launching processes from Task Scheduler. Without this tool there are two issues with Task Scheduler:
 1. When the task is manually ended via Task Scheduler, the process or its descendants was not necessarily all killed. Using a job object solves this.
