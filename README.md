@@ -8,3 +8,6 @@ SingleInstanceCmd.exe mutexname [-] cmd [args]
 <br>"-" indicates that no job object must be created (descending child processes will live even when SingleInstanceCmd.exe is killed)
 
 See also example.bat for a usage example.
+
+
+[![Analytics](https://ga-beacon.appspot.com/UA-351728-28/SingleInstanceCmd/README.md?pixel)](https://github.com/igrigorik/ga-beacon)
