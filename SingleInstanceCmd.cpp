@@ -35,6 +35,8 @@ int _tmain(int argc, const _TCHAR* argv[])
 {
 	if (argc < 3)
 	{
+		wprintf(L"Copyright (c) Roland Pihlakas 2017-2020, roland@simplify.ee");
+		wprintf(L"");
 		wprintf(L"\nUsage:\n");
 		wprintf(L"SingleInstanceCmd.exe mutexname [-] cmd [args]\n");
 		wprintf(L"- indicates that no job object must be created");
